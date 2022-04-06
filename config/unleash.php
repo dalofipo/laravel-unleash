@@ -21,6 +21,11 @@ return [
   // your Unleash server may use a different endpoint e.g. if it houses flags for multiple projects.
   'featuresEndpoint' => env('UNLEASH_FEATURES_ENDPOINT', '/api/client/features'),
 
+  // Array key for accessing the response from Unleash Server
+  // A standard server will return with 'features', but Unleash Proxy/possibly future iterations
+  // return a different key ('toggles')
+  'featuresKey' => env('UNLEASH_FEATURES_KEY', 'features'),
+
   // Globally control whether Unleash is enabled or disabled.
   // If not enabled, no API requests will be made and all "enabled" checks will return `false` and
   // "disabled" checks will return `true`.

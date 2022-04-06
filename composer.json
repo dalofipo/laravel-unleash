@@ -1,5 +1,5 @@
 {
-    "name": "mikefrancis/laravel-unleash",
+    "name": "coalfocks/laravel-unleash",
     "description": "An Unleash client for Laravel",
     "type": "library",
     "require": {
@@ -25,8 +25,8 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Mike Francis",
-            "email": "mikeffrancis@gmail.com"
+            "name": "Cole Fox",
+            "email": "cfox@swellcx.com"
         }
     ],
     "extra": {

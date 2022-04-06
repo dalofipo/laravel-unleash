@@ -144,6 +144,6 @@ class Unleash
 
     protected function formatResponse($data): array
     {
-        return Arr::get($data, 'features', []);
+        return Arr::get($data, $this->config->get('unleash.featuresKey'), []);
     }
 }
