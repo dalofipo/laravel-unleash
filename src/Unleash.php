@@ -131,7 +131,12 @@ class Unleash
 
     protected function fetchFeatures(): array
     {
-        $response = $this->client->get($this->config->get('unleash.featuresEndpoint'));
+        $user = user();
+        $endpoint = $this->config->get('unleash.featuresEndpoint')
+        if($user){
+            $endpoint .= '?userId=' . $user->id;
+        }
+        $response = $this->client->get($endpoint);
 
         try {
             $data = json_decode((string)$response->getBody(), true, 512, \JSON_BIGINT_AS_STRING);
